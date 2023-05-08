@@ -2,7 +2,7 @@ package io.codelex.typesandvariables;
 
 import java.util.Scanner;
 
-public class speedConversions {
+public class SpeedConversions {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter distance in meters: ");

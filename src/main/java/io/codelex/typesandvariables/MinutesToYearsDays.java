@@ -1,6 +1,6 @@
 package io.codelex.typesandvariables;
 
-public class minutesToYearsDays {
+public class MinutesToYearsDays {
     public static void main(String[] args){
         int minutes = 6900;
         double days = (double) minutes / 1440;

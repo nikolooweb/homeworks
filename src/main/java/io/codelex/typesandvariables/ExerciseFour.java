@@ -1,6 +1,6 @@
 package io.codelex.typesandvariables;
 
-public class exerciseFour {
+public class ExerciseFour {
     public static void main(String[] args) {
         String name = "Nikolajs Rubaniks";
         int yearOfBirth = 2003;

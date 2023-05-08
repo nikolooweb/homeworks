@@ -3,7 +3,7 @@ package io.codelex.typesandvariables;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class sumOfInputNumbers {
+public class SumOfInputNumbers {
 
     public static void main(String[] args) {
 
@@ -20,8 +20,8 @@ public class sumOfInputNumbers {
             }
         }
         int sum = 0;
-        for (int i = 0; i < numbers.size(); i++) {
-            sum += numbers.get(i);
+        for (int number : numbers) {
+            sum += number;
         }
         System.out.println(sum);
 

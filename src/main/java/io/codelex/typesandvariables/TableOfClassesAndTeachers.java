@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 
-public class tableOfClassesAndTeachers {
+public class TableOfClassesAndTeachers {
     public static void main(String[] args) {
         LinkedHashMap<String, String> classes = new LinkedHashMap<String, String>();
 
