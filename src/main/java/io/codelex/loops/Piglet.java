@@ -10,6 +10,7 @@ public class Piglet {
 
         boolean gameOn = true;
         int points = 0;
+
         String[] commandsToContinue = {"yes", "y"};
         String[] commandsToQuit = {"no", "n", "exit"};
 
@@ -22,7 +23,7 @@ public class Piglet {
 
             if (randomDice != 1) {
                 points += randomDice;
-
+              
                 System.out.println("Roll again?");
 
                 boolean positiveAnswer = false;
