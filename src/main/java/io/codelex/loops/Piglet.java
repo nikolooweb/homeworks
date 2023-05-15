@@ -6,11 +6,14 @@ import java.util.Scanner;
 public class Piglet {
     public static void main(String[] arg) {
 
-
         System.out.println("Welcome to Piglet!");
 
         boolean gameOn = true;
         int points = 0;
+
+        String[] commandsToContinue = {"yes", "y"};
+        String[] commandsToQuit = {"no", "n", "exit"};
+
         Scanner in = new Scanner(System.in);
 
         while (gameOn) {
@@ -20,10 +23,7 @@ public class Piglet {
 
             if (randomDice != 1) {
                 points += randomDice;
-
-                String[] commandsToContinue = {"yes", "y"};
-                String[] commandsToQuit = {"no", "n", "exit"};
-
+              
                 System.out.println("Roll again?");
 
                 boolean positiveAnswer = false;
@@ -45,9 +45,6 @@ public class Piglet {
                     System.out.println("good job!!!");
                 } else if (negativeAnswer) {
                     System.out.printf("You got %d points.", points);
-                    gameOn = false;
-                } else {
-                    System.out.println("Invalid command... game over");
                     gameOn = false;
                 }
             } else {
