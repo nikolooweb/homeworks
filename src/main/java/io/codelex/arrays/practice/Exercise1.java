@@ -1,5 +1,7 @@
 package io.codelex.arrays.practice;
 
+import java.util.Arrays;
+
 public class Exercise1 {
 
     //TODO: Write a Java program to sort a numeric array and a string array.
@@ -11,6 +13,9 @@ public class Exercise1 {
                 1456, 2165, 1457, 2456
         };
 
+        int[] myArray1Sorted = myArray1.clone();
+        Arrays.sort(myArray1Sorted);
+
         String[] myArray2 = {
                 "Java",
                 "Python",
@@ -20,15 +25,16 @@ public class Exercise1 {
                 "C++"
         };
 
-        /*
-        fixme
-        System.out.println("Original numeric array : " + .........);
-        ........... //Sort array
-        System.out.println("Sorted numeric array : " + .........);
+        String[] myArray2Sorted = myArray2.clone();
+        Arrays.sort(myArray2Sorted);
 
-        System.out.println("Original string array : " + .........);
-        ......... //Sort array
-        System.out.println("Sorted string array : " + .........);
-        */
+        System.out.println("Original numeric array : " + Arrays.toString(myArray1));
+
+        System.out.println("Sorted numeric array : " + Arrays.toString(myArray1Sorted));
+
+        System.out.println("Original string array : " + Arrays.toString(myArray2));
+
+        System.out.println("Sorted string array : " + Arrays.toString(myArray2Sorted));
+
     }
 }
