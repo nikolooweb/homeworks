@@ -7,12 +7,23 @@ public class BankAccount {
     public String name;
     public double balance;
 
+    public BankAccount(String name, double balance){
+        this.name = name;
+        this.balance = balance;
+    }
     public final void deposit(double amount) {
-        //todo
+        balance += amount;
     }
 
     public final void withdraw(double amount) {
-        //todo
+        balance -= amount;
     }
 
+    @Override
+    public String toString() {
+        if (Math.signum(balance) < 0){
+        return name + ", -$" + Math.abs(balance);
+        }
+        return name + ", $" + balance;
+    }
 }

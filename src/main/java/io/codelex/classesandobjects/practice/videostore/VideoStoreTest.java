@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class VideoStoreTest {
     private static final int COUNT_OF_MOVIES = 3;
+    private static final VideoStore store1 = new VideoStore();
 
     public static void main(String[] args) {
-        final Scanner keyboard = new Scanner(System.in);
+        final Scanner keyboard = new Scanner(System.in).useDelimiter("\r?\n");
 
         while (true) {
             System.out.println("Choose the operation you want to perform ");
@@ -14,6 +15,7 @@ public class VideoStoreTest {
             System.out.println("Choose 1 to fill video store");
             System.out.println("Choose 2 to rent video (as user)");
             System.out.println("Choose 3 to return video (as user)");
+            System.out.println("Choose 4 to see inventory of videos (as user)");
 
             int n = keyboard.nextInt();
 
@@ -29,6 +31,9 @@ public class VideoStoreTest {
                 case 3:
                     returnVideo(keyboard);
                     break;
+                case 4:
+                    store1.listInventoryOfVideos();
+                    break;
                 default:
                     break;
             }
@@ -38,19 +43,30 @@ public class VideoStoreTest {
 
     private static void fillVideoStore(Scanner scanner) {
         for (int i = 0; i < COUNT_OF_MOVIES; i++) {
-            System.out.println("Enter movie name");
+
+            System.out.println("Enter movie name: ");
             String movieName = scanner.next();
-            System.out.println("Enter rating");
+
+            System.out.println("Enter rating: ");
             int rating = scanner.nextInt();
-            //todo - add video
+
+            store1.addVideo(movieName);
+            store1.setRatingByVideoTitle(movieName, rating);
         }
     }
 
     private static void rentVideo(Scanner scanner) {
-        //todo - rent video
+        store1.listInventoryOfVideos();
+        System.out.println("================================================");
+        System.out.println("Which video do you want to rent out, type title: ");
+        String movieName = scanner.next();
+        store1.checkOutVideo(movieName);
     }
 
     private static void returnVideo(Scanner scanner) {
-        //todo - return video
+        System.out.println("================================================");
+        System.out.println("Which video do you want to return, type title: ");
+        String movieName = scanner.next();
+        store1.returnVideo(movieName);
     }
 }
