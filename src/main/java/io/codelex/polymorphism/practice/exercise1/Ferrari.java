@@ -1,32 +1,35 @@
 package io.codelex.polymorphism.practice.exercise1;
 
-public class Lexus implements Car{
+public class Ferrari implements Car {
     private Integer currentSpeed = 0;
 
+    @Override
     public void speedUp() {
-        currentSpeed += 8;
+        currentSpeed += 10;
     }
 
+    @Override
     public void slowDown() {
-        currentSpeed += 8;
+        currentSpeed -= 20;
     }
 
+    @Override
     public String showCurrentSpeed() {
         return currentSpeed.toString();
     }
 
     @Override
-    public String getCarName() {
-        return "Lexus";
-    }
-
-    public void useNitrousOxideEngine() {
-        currentSpeed = currentSpeed + 30;
-    }
-
-
-    @Override
     public void startEngine() {
         Car.super.startEngine();
+    }
+
+    @Override
+    public void useNitrousOxideEngine() {
+        currentSpeed += 500;
+    }
+
+    @Override
+    public String getCarName() {
+        return "Ferrari";
     }
 }
