@@ -20,7 +20,6 @@ public class Order {
             if (((FoodItem) item).getDateOfExpiration().isBefore(LocalDate.now())) {
                 throw new BadFoodException("This food has expired");
             }
-            ;
         }
         items.add(item);
     }

@@ -8,6 +8,7 @@ import java.time.LocalDate;
 
 public class OrderProgram {
     public static void main(String[] args) throws WrongOrderException, BadFoodException {
+
         FoodItem milk = new FoodItem("Milk", BigDecimal.valueOf(0.75), LocalDate.of(2023, 6, 25));
         ElectronicsItem dishWasher = new ElectronicsItem("Dishwasher", BigDecimal.valueOf(199.99), 1000);
         HouseholdItem kitchenTable = new HouseholdItem("Kitchen table", BigDecimal.valueOf(154.99), "white");
@@ -28,8 +29,6 @@ public class OrderProgram {
         Invoice invoice = new Invoice("INV123", order1);
         System.out.println(invoice.printInvoice());
 
-        invoice.send();
-        System.out.println(invoice.printInvoice());
 
     }
 }
