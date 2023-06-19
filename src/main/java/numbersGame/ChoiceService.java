@@ -3,8 +3,8 @@ package numbersGame;
 import java.util.*;
 
 public class ChoiceService {
-    public Map<String, Integer> getChoices(Integer originalNumber){
-        Map<String,Integer> map = new LinkedHashMap<>();
+    public Map<String, Integer> getChoices(Integer originalNumber) {
+        Map<String, Integer> map = new LinkedHashMap<>();
         map.put("A", HelperClass.randomNumber(originalNumber));
         map.put("B", HelperClass.randomNumber(originalNumber));
         map.put("C", HelperClass.randomNumber(originalNumber));

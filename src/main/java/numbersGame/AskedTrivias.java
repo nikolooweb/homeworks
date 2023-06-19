@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AskedTrivias {
-    List<String> questions;
-    public AskedTrivias(){
+    private List<String> questions;
+
+    public AskedTrivias() {
         questions = new ArrayList<>();
     }
-    public void addQuestion(String question){
+
+    public void addQuestion(String question) {
         questions.add(question);
     }
 

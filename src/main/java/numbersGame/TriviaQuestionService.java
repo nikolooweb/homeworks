@@ -13,7 +13,6 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 
-
 public class TriviaQuestionService {
 
     public Pair<Integer, String> getAnswerAndQuestion(String api) throws IOException, InterruptedException {
@@ -22,7 +21,8 @@ public class TriviaQuestionService {
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
         ObjectMapper mapper = new ObjectMapper();
-        Post post = mapper.readValue(response.body(), new TypeReference<Post>(){});
+        Post post = mapper.readValue(response.body(), new TypeReference<Post>() {
+        });
 
         return Pair.of(post.getNumber(), HelperClass.formatTriviaText(post.getText()));
     }
