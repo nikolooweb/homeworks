@@ -2,7 +2,9 @@ package io.codelex.classesandobjects.practice;
 
 public class Date {
 
-    private int month, day, year;
+    private int month;
+    private int day;
+    private int year;
 
     public Date(int month, int day, int year) {
         this.month = month;
